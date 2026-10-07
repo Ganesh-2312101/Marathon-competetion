@@ -21,6 +21,13 @@ app.use('/api/participants', participantRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
 // Health check endpoint
+app.get('/api', (req, res) => {
+  res.send({
+    message: 'TAMIL NADU MARATHON 2026 - Registration System API Running',
+    status: 'Active'
+  });
+});
+
 app.get('/', (req, res) => {
   res.send({
     message: 'TAMIL NADU MARATHON 2026 - Registration System API Running',
@@ -28,7 +35,11 @@ app.get('/', (req, res) => {
   });
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`🚀 Node.js Express Server running on http://localhost:${PORT}`);
-});
+// Export app for Serverless / Vercel deployment & listen if run directly
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Node.js Express Server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

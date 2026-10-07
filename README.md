@@ -2,6 +2,15 @@
 
 A full-stack web-based State-Level Marathon Registration System built with **React.js**, **Node.js**, **Express.js**, and **MySQL**.
 
+[![Deploy with Vercel](https.vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGanesh-2312101%2FMarathon-competetion)
+
+---
+
+## 🚀 Live Demo & Deployment Links
+
+- **GitHub Repository**: [https://github.com/Ganesh-2312101/Marathon-competetion.git](https://github.com/Ganesh-2312101/Marathon-competetion.git)
+- **1-Click Vercel Deploy Link**: [Deploy on Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGanesh-2312101%2FMarathon-competetion)
+
 ---
 
 ## 🌟 Key Features
@@ -50,25 +59,27 @@ A full-stack web-based State-Level Marathon Registration System built with **Rea
 │   ├── schema.sql                      # MySQL database setup SQL
 │   └── server.js                       # Express server entry point
 │
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   │   ├── Navbar.jsx              # Header navigation bar
-    │   │   ├── ParticipantTable.jsx    # Table with search & multi-filter
-    │   │   └── StatCard.jsx            # Summary metric card component
-    │   ├── pages/
-    │   │   ├── Home.jsx                # Landing page with live statistics
-    │   │   ├── Register.jsx            # Registration form page
-    │   │   ├── Success.jsx             # Confirmation ticket page
-    │   │   └── Dashboard.jsx           # Admin analytics dashboard page
-    │   ├── services/
-    │   │   └── api.js                  # Axios HTTP client service
-    │   ├── App.css                     # Modern white theme visual CSS
-    │   ├── App.jsx                     # Application router layout
-    │   └── main.jsx                    # React entry point
-    ├── index.html                      # HTML template
-    ├── package.json                    # Frontend dependencies
-    └── vite.config.js                  # Vite configuration
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx              # Header navigation bar
+│   │   │   ├── ParticipantTable.jsx    # Table with search & multi-filter
+│   │   │   └── StatCard.jsx            # Summary metric card component
+│   │   ├── pages/
+│   │   │   ├── Home.jsx                # Landing page with live statistics
+│   │   │   ├── Register.jsx            # Registration form page
+│   │   │   ├── Success.jsx             # Confirmation ticket page
+│   │   │   └── Dashboard.jsx           # Admin analytics dashboard page
+│   │   ├── services/
+│   │   │   └── api.js                  # Axios HTTP client service
+│   │   ├── App.css                     # Modern white theme visual CSS
+│   │   ├── App.jsx                     # Application router layout
+│   │   └── main.jsx                    # React entry point
+│   ├── index.html                      # HTML template
+│   ├── package.json                    # Frontend dependencies
+│   └── vite.config.js                  # Vite configuration
+│
+└── vercel.json                         # 1-Click Vercel cloud deployment config
 ```
 
 ---
@@ -108,32 +119,15 @@ CREATE TABLE IF NOT EXISTS participants (
 ```bash
 cd backend
 npm install
-```
-
-Configure your MySQL credentials in `backend/.env`:
-```env
-PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_mysql_password
-DB_NAME=marathon_registration
-DB_PORT=3306
-```
-
-Start the backend Express server:
-```bash
 node server.js
 ```
-*(Server runs at `http://localhost:5000`)*
 
 ### 2. Frontend Setup
-In a new terminal:
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-*(Application runs at `http://localhost:3000`)*
 
 ---
 
